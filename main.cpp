@@ -12,6 +12,7 @@ double const microBlack = 2.5;
 double const microWhite0 = 1.25;
 double const microWhite1 = 0.5;
 double const microWhite2 = 0.25;
+double discCount[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0}
 
 double totalWeight;
 
@@ -24,6 +25,42 @@ int main (int argc, char *argv[]) {
   }
 
   while (loadingWeight > 0){
-
+    //@TODO: Test Logic
+    if (loadingWeight - red*2 != 0){
+      discCount[0]++;
+      loadingWeight = loadingWeight - red*2;
+    }
+    if (loadingWeight - blue*2 != 0){
+      discCount[1]++;
+      loadingWeight = loadingWeight - blue*2;
+    }
+    if (loadingWeight - yellow*2 != 0){
+      discCount[2]++;
+      loadingWeight = loadingWeight - yellow*2;
+    }
+    if (loadingWeight - green*2 != 0){
+      discCount[3]++;
+      loadingWeight = loadingWeight - green*2;
+    }
+    if (loadingWeight - white*2 != 0){
+      discCount[4]++;
+      loadingWeight = loadingWeight - white*2;
+    }
+    if (loadingWeight - microBlack*2 != 0){
+      discCount[5]++;
+      loadingWeight = loadingWeight - microBlack*2;
+    }
+    if (loadingWeight - microWhite0*2 != 0){
+      discCount[6]++;
+      loadingWeight = loadingWeight - microWhite0*2;
+    }
+    if (loadingWeight - microWhite1*2 != 0){
+      discCount[7]++;
+      loadingWeight = loadingWeight - microWhite1*2;
+    }
+    if (loadingWeight - microWhite2*2 != 0){
+      discCount[8]++;
+      loadingWeight = loadingWeight - microWhite2*2;
+    }
   }
 }

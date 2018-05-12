@@ -1,7 +1,4 @@
-#include "split.h"
 #include <iostream>
-#include <vector>
-using namespace std;
 
 int const barbell = 20;
 int const collars = 5.0;
@@ -17,5 +14,16 @@ double const microWhite1 = 0.5;
 double const microWhite2 = 0.25;
 
 double totalWeight;
-double loadingWeight = totalWeight - barbell - collars;
 
+
+int main (int argc, char *argv[]) {
+  totalWeight = argv[0];
+  double loadingWeight = totalWeight - barbell - collars;
+  if (loadingWeight % 2.5 != 0){
+    std::cerr << "Must be of 2.5kg increments" << std::endl;
+  }
+
+  while (loadingWeight > 0){
+
+  }
+}

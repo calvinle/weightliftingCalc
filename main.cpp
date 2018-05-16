@@ -22,6 +22,11 @@ int main (int argc, char *argv[]) {
   double loadingWeight = totalWeight - barbell - collars;
   if (loadingWeight % 2.5 != 0){
     std::cerr << "Must be of 2.5kg increments" << std::endl;
+    return -1;
+  }
+  if (loadingWeight < 25){
+    std::cerr << "No plates" << std::endl;
+    return 0;
   }
 
   while (loadingWeight > 0){
@@ -73,4 +78,6 @@ int main (int argc, char *argv[]) {
   std::cout << "1.25KG DISCS: " << discCount[6] << endl;
   std::cout << "0.5KG DISCS: " << discCount[7] << endl;
   std::cout << "0.25KG DISCS: " << discCount[8] << endl;
+  
+  return 0;
 }

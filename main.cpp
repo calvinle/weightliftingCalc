@@ -30,37 +30,47 @@ int main (int argc, char *argv[]) {
       discCount[0]++;
       loadingWeight = loadingWeight - red*2;
     }
-    if (loadingWeight - blue*2 >= 0){
+    else if (loadingWeight - blue*2 >= 0){
       discCount[1]++;
       loadingWeight = loadingWeight - blue*2;
     }
-    if (loadingWeight - yellow*2 >= 0){
+    else if (loadingWeight - yellow*2 >= 0){
       discCount[2]++;
       loadingWeight = loadingWeight - yellow*2;
     }
-    if (loadingWeight - green*2 >= 0){
+    else if (loadingWeight - green*2 >= 0){
       discCount[3]++;
       loadingWeight = loadingWeight - green*2;
     }
-    if (loadingWeight - white*2 >= 0){
+    else if (loadingWeight - white*2 >= 0){
       discCount[4]++;
       loadingWeight = loadingWeight - white*2;
     }
-    if (loadingWeight - microBlack*2 >= 0){
+    else if (loadingWeight - microBlack*2 >= 0){
       discCount[5]++;
       loadingWeight = loadingWeight - microBlack*2;
     }
-    if (loadingWeight - microWhite0*2 >= 0){
+    else if (loadingWeight - microWhite0*2 >= 0){
       discCount[6]++;
       loadingWeight = loadingWeight - microWhite0*2;
     }
-    if (loadingWeight - microWhite1*2 >= 0){
+    else if (loadingWeight - microWhite1*2 >= 0){
       discCount[7]++;
       loadingWeight = loadingWeight - microWhite1*2;
     }
-    if (loadingWeight - microWhite2*2 >= 0){
+    else if (loadingWeight - microWhite2*2 >= 0){
       discCount[8]++;
       loadingWeight = loadingWeight - microWhite2*2;
     }
   }
+  
+  std::cout << "25KG DISCS: " << discCount[0] << endl;
+  std::cout << "20KG DISCS: " << discCount[1] << endl;
+  std::cout << "15KG DISCS: " << discCount[2] << endl;
+  std::cout << "10KG DISCS: " << discCount[3] << endl;
+  std::cout << "5KG DISCS: " << discCount[4] << endl;
+  std::cout << "2.5KG DISCS: " << discCount[5] << endl;
+  std::cout << "1.25KG DISCS: " << discCount[6] << endl;
+  std::cout << "0.5KG DISCS: " << discCount[7] << endl;
+  std::cout << "0.25KG DISCS: " << discCount[8] << endl;
 }
